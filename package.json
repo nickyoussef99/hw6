@@ -10,17 +10,38 @@
     "eslint-plugin-react-hooks": "^4 || ^3 || ^2.3.0 || ^1.7.0"
   },
   "dependencies": {
+    "axios": "^0.21.0",
     "babel-eslint": "^10.1.0",
+    "bootstrap": "^4.5.3",
+    "concurrently": "^5.3.0",
     "cookie-session": "^1.4.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.10.11"
+    "mongoose": "^5.10.11",
+    "nodemon": "^2.0.6",
+    "parcel": "^1.12.4",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^17.0.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "build": "parcel watch frontend/index.html",
+    "server": "nodemon backend/server.js",
+    "dev": "concurrently --kill-others \"npm run build\" \"npm run server\""
   },
+  "browserslist": [
+    "last 3 and_chr versions",
+    "last 3 chrome versions",
+    "last 3 opera versions",
+    "last 3 ios_saf versions",
+    "last 3 safari versions"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC"
